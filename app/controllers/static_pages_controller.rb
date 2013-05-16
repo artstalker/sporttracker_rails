@@ -11,4 +11,19 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def training
+  end
+
+  def statistic
+  end
+
+  def friends
+  end
+
+  def calendar
+  end
+
+  def competitions
+  end
 end

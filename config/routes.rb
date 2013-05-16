@@ -13,6 +13,12 @@ SportTracker::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
+  match '/training',    to: 'static_pages#training'
+  match '/statistic',    to: 'static_pages#statistic'
+  match '/friends',    to: 'static_pages#friends'
+  match '/calendar',    to: 'static_pages#calendar'
+  match '/competitions',    to: 'static_pages#competitions'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
