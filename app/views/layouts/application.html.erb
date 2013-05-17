@@ -4,6 +4,8 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" %>
+  <%= javascript_include_tag "http://code.highcharts.com/highcharts.js" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
