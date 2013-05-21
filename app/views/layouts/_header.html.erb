@@ -38,15 +38,34 @@
       <nav>
         <ul class="nav nav-tabs">
           <% if signed_in? %>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Training", training_path %></li>
+            <li><%= link_to root_path do %>
+              <i class="icon-home icon-white"></i> Home
+            <% end %></li>
+           
+           <li><%= link_to training_path do %>
+              <i class="icon-certificate icon-white"></i> Training
+            <% end %></li>
 
-            <li><%= link_to "Statistics", statistic_path %></li>
-            <li><%= link_to "Friends", users_path %></li>
 
-            <li><%= link_to "Calendar", calendar_path %></li>
-            <li><%= link_to "Competitions", competitions_path %></li>
+            <li><%= link_to statistic_path do %>
+              <i class="icon-signal icon-white"></i> Statistics
+            <% end %></li>
+           
           
+
+            <li><%= link_to users_path do %>
+              <i class="icon-user icon-white"></i> Friends
+            <% end %></li>
+           
+
+            <li><%= link_to calendar_path do %>
+              <i class="icon-calendar icon-white"></i> Calendar
+            <% end %></li>
+
+            <li><%= link_to competitions_path do %>
+              <i class="icon-flag icon-white"></i> Competitions
+            <% end %></li>
+
           <% end %>
         </ul>
       </nav>

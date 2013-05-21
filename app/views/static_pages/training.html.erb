@@ -1,13 +1,52 @@
 <% provide(:title, 'Training') %>
 <h1>Training</h1>
 <div class="row">  
-<div class="span4">
- 1st week
-</div>
-<div class="span4">
- <%= image_tag("man.png", alt: "Man",class: "center")%>
-</div>
-<div class="span4">
- Excersices
-</div>
+	<div class="span6">
+	 	<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+		  <ul class="nav nav-tabs">
+		    <li class="active"><a href="#tab1" data-toggle="tab">All</a></li>
+		    <li><a href="#tab2" data-toggle="tab">Pecs</a></li>
+		    <li><a href="#tab3" data-toggle="tab">Biceps</a></li>
+		    <li><a href="#tab4" data-toggle="tab">Back</a></li>
+		    <li><a href="#tab5" data-toggle="tab">Leg</a></li>
+		    <li><a href="#tab6" data-toggle="tab">Cardio</a></li>
+		  </ul>
+		  <div class="tab-content">
+		    <div class="tab-pane active" id="tab1">
+		    	<button class="btn btn-info" type="button">Bench press</button>
+		      	<button class="btn btn-info" type="button">Bench press</button>
+		      	<button class="btn btn-info" type="button">Biceps</button>
+		      	<button class="btn btn-info" type="button">Back</button>
+		      	<button class="btn btn-info" type="button">Leg</button>
+		      	<button class="btn btn-info" type="button">Cardio</button>
+		      
+		    </div>
+		    <div class="tab-pane" id="tab2">
+		       	<button class="btn btn-info" type="button">Bench press</button>
+		      	<button class="btn btn-info" type="button">Bench press</button>
+		      	<button class="btn btn-info" type="button">Bench press</button>
+		      	<button class="btn btn-info" type="button">Bench press</button>
+		    </div>
+		    <div class="tab-pane" id="tab3">
+			    <button class="btn btn-info" type="button">Biceps</button>
+			    <button class="btn btn-info" type="button">Biceps</button>
+			    <button class="btn btn-info" type="button">Biceps</button>
+			    <button class="btn btn-info" type="button">Biceps</button>
+		    </div>
+		    <div class="tab-pane" id="tab4">
+		   		<button class="btn btn-info" type="button">Back</button>
+		    </div>
+		    <div class="tab-pane" id="tab5">
+		    	<button class="btn btn-info" type="button">Leg</button>
+		    </div>
+		    <div class="tab-pane" id="tab6">
+		      	<button class="btn btn-info" type="button">Cardio</button>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="span6">
+	 Week calendar
+	</div>
 </div>
