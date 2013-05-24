@@ -1,27 +1,127 @@
 <% provide(:title, 'Training') %>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
 <h1>Training</h1>
 <div class="row">  
+	
+		
+
 	<div class="span6 pagination-centered">
 		<h3>Excersices</h3>
 		<br/>
 	 	<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
 		  <ul class="nav nav-tabs">
 		    <li class="active"><a href="#tab1" data-toggle="tab">All</a></li>
-		    <li><a href="#tab2" data-toggle="tab">Pecs</a></li>
-		    <li><a href="#tab3" data-toggle="tab">Biceps</a></li>
-		    <li><a href="#tab4" data-toggle="tab">Back</a></li>
-		    <li><a href="#tab5" data-toggle="tab">Leg</a></li>
+		    <li><a href="#tab2" data-toggle="tab">Core</a></li>
+		    <li><a href="#tab3" data-toggle="tab">Lower Body</a></li>
+		    <li><a href="#tab4" data-toggle="tab">Chest</a></li>
+		    <li><a href="#tab5" data-toggle="tab">Shoulders</a></li>
+		    <li><a href="#tab6" data-toggle="tab">Back</a></li>
+		    <li><a href="#tab5" data-toggle="tab">Arms</a></li>
 		    <li><a href="#tab6" data-toggle="tab">Cardio</a></li>
+		     <li><a href="#tab6" data-toggle="tab">Stretches</a></li>
+		     <li><a href="#tab6" data-toggle="tab">Personal Trainer</a></li>
 		  </ul>
 		  <div class="tab-content">
-		    <div class="tab-pane active" id="tab1">
-		    	<span class="badge">Bench press</span>
-		    	<span class="badge">Bench press</span>
-		    	<span class="badge">Biceps</span>
-		    	<span class="badge">Back</span>
-		    	<span class="badge">Leg</span>
-		    	<span class="badge">Cardio</span>
-		    	
+		    <div class="tab-pane active" id="tab1" >
+		    		<div class="ex_list" ondrop="drop(event)" ondragover="allowDrop(event)" >
+		    			
+
+		    <div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Barbell Bench Press Flat
+					</h4> 
+			</div>
+		</div>
+		</div>
+    <div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Barbell Bench Press Decline
+					</h4> 
+			</div>
+		</div>
+		</div>
+    <div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Bodyweight Pushup
+					</h4> 
+			</div>
+		</div>
+		</div>
+    <div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Dumbbell Bench Press
+					</h4> 
+			</div>
+		</div>
+		</div>
+    <div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Dumbbell Floor Press
+					</h4> 
+			</div>
+		</div>
+		</div>
+
+<div draggable="true" ondragstart="drag(event)" id="drag1">
+		    <div class="span3" id = "exerc">
+
+			<div class="media well"  >
+				 <a href="#" class="pull-left"><img class="img-polaroid" src="http://lorempixel.com/64/64/"  alt='' /> </a>
+				
+					<h4 class="media-heading" style = "padding-top:10px">
+						Deep dick sucking
+					</h4> 
+			</div>
+		</div>
+		</div>
+
+		
+	
+		
+
+</div>
 		      
 		    </div>
 		    <div class="tab-pane" id="tab2">
@@ -55,37 +155,67 @@
 	<div class="span6 pagination-centered">
 		<h3>Schedule</h3>
 		<br/>
+		 <div class="ex_list"  >
 	 	<table class="table table-striped table-bordered table-hover">
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;width:15%">Mon</td>
-	 			<td style="width:85%"></td>
+	 			<td style="width:85%"><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Tue</td>
-	 			<td ></td>
+	 			<td ><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Wed</td>
-	 			<td></td>
+	 			<td><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Thu</td>
-	 			<td></td>
+	 			<td><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Fri</td>
-	 			<td></td>
+	 			<td><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Sat</td>
-	 			<td></td>
+	 			<td><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
 	 		<tr style="height:80px">
 	 			<td style="text-align: center;vertical-align: middle;">Sun</td>
-	 			<td></td>
+	 			<td><div class="timetable1" id = "timetable1"   ondrop="drop(event)" ondragover="allowDrop(event)">
+
+
+
+	 			</div></td>
 	 		</tr>
  
 		</table>
+	</div>
 	</div>
 </div>
