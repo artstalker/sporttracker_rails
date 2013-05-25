@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415181157) do
+ActiveRecord::Schema.define(:version => 20130524155045) do
+
+  create_table "body_stats", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "Height"
+    t.integer  "Weight"
+    t.integer  "Biceps"
+    t.integer  "Waist"
+    t.date     "Date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
