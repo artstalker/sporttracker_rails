@@ -11,7 +11,68 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415181157) do
+ActiveRecord::Schema.define(:version => 20130530094312) do
+
+  create_table "body_stats", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "Height"
+    t.integer  "Weight"
+    t.integer  "Biceps"
+    t.integer  "Waist"
+    t.date     "Date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "excercises", :force => true do |t|
+    t.string   "name"
+    t.integer  "muscle_id"
+    t.string   "complexity"
+    t.string   "description"
+    t.string   "gif_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "muscles", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "mesage"
+    t.datetime "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "program_to_excersices", :force => true do |t|
+    t.integer  "program_id"
+    t.integer  "excersice_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "excersice_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "user_programs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "program_id"
+    t.date     "start_date"
+    t.datetime "shift"
+    t.string   "state"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

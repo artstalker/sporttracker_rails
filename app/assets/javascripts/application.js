@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= require jquery-ui
+//= require best_in_place
+
+
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+});

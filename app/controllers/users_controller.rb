@@ -15,6 +15,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @bodystat = @user.body_stats.first
+    
   end
 
   def create
@@ -46,6 +48,17 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'edit'
+    end
+  end
+
+  def savebodystat
+    
+    newbodystat = @bodystat.dup
+     if newbodystat.save
+      flash[:success] = "Data has been saved"
+      @bodystat = newbodystat
+    else
+      #render 'new'
     end
   end
 
