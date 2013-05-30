@@ -13,25 +13,25 @@
     <section>
       	<p>
 		  <b>Height:</b>
-		  <%= best_in_place @bodystat, :height %>
+		  <%= @bodystat.Height %>
 		</p>
 		<p>
 		  <b>Weight:</b>
-		  <%= best_in_place @bodystat, :weight %>
+		  <%=  @bodystat.Weight %>
 		</p>
 		<p>
 		  <b>Biceps:</b>
-		  <%= best_in_place @bodystat, :biceps %>
+		  <%=  @bodystat.Biceps %>
 		</p>
 		<p>
 		  <b>Waist:</b>
-		  <%= best_in_place @bodystat, :waist %>
+		  <%=  @bodystat.Waist %>
 		</p>
 		<p>
-		  <b>Last updated:</b> <%= @bodystat.date %>
+		  <b>Last updated:</b> <%=  @bodystat.Date %>
 		</p>
 
-		<%= link_to 'Update', @user.savebodystat %>
+		<%= link_to 'Update' %>
 	</section>
   </aside>
   

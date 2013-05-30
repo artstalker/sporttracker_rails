@@ -7,6 +7,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'simple_calendar', '~> 0.1.8'
+gem 'best_in_place'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

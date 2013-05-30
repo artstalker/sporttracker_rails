@@ -1,6 +1,9 @@
 SportTracker::Application.routes.draw do
 
-  resources :users
+  
+  resources :users do
+    resources :bodystats
+  end
   resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'

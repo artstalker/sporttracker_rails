@@ -15,7 +15,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @bodystat = @user.bodystats.last
+    @bodystat = @user.body_stats.first
+    
   end
 
   def create
