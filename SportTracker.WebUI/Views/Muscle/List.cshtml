@@ -1,0 +1,13 @@
+﻿@model IEnumerable<SportTracker.WebUI.Models.Muscle>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@foreach (var p in Model)
+{
+    <div class="item">
+        <h3>@p.Name</h3>
+        @p.Description
+    </div>
+}
