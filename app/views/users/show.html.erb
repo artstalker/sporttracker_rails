@@ -1,0 +1,38 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+
+  <aside class="span8">
+    <section>
+      	<p>
+		  <b>Height:</b>
+		  <%= @bodystat.Height %>
+		</p>
+		<p>
+		  <b>Weight:</b>
+		  <%=  @bodystat.Weight %>
+		</p>
+		<p>
+		  <b>Biceps:</b>
+		  <%=  @bodystat.Biceps %>
+		</p>
+		<p>
+		  <b>Waist:</b>
+		  <%=  @bodystat.Waist %>
+		</p>
+		<p>
+		  <b>Last updated:</b> <%=  @bodystat.Date %>
+		</p>
+
+		<%= link_to 'Update' %>
+	</section>
+  </aside>
+  
+</div>

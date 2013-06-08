@@ -1,0 +1,7 @@
+<% provide(:title, 'Calendar') %>
+<h1>Calendar</h1>
+<div>
+ <%= calendar @events do |event| %>
+  <div><%= link_to event.title, event %></div>
+<% end %>
+</div>
